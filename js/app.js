@@ -16,10 +16,21 @@ async function fetchPosts(api) {
 fetchPosts(API_URL)
 
 
-function createCard(data) {
-    data.slice(0,10).forEach((user) => {
+function createCard(data,index) {
+    data.slice(0,12).forEach((posts) => {
+
         let card = document.createElement("div")
         card.classList.add("card")
-        card.innerHTML = 
-    });
+        card.innerHTML = `
+        <div class = "card__img"><i class="fa-brands fa-js fa-beat-fade"></i></div>
+        <h3>${posts.title}</h3>
+        <p>${posts.body}</p>
+        `
+
+        wrapper.appendChild(card)
+    })
 }
+
+
+
+
